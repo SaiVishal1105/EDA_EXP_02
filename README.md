@@ -49,7 +49,8 @@ print(df.columns)
 print(df.dtypes)
 df.info()
 df.describe()
-
+```
+```
 ##2) Analyze Missing Values
 ## a) Identify missing values in each column
 df.isnull()
@@ -72,7 +73,8 @@ df.isnull().sum()
 df_drop=df.dropna(subset=['director','country'])
 ## i) Display the new DataFrame
 df_drop.head()
-
+```
+```
 ## 3) Perform Data Indexing and Selection
 ##a) Display only Movie records
 movies=df.loc[df['type']=='Movie']
@@ -92,7 +94,8 @@ df.loc[df['country'].str.contains('India',na=False),['title','country']]
 df.loc[(df['type']=='TV Show') & (df['country'].str.contains("United States",na=False))]
 ## h) Display Movies with rating PG-13
 df.loc[(df['type']=='Movie') & (df['rating']=='PG-13')]
-
+```
+```
 ##4) Create New Columns
 ## a) Create Title Length
 df['Title Length']=df['title'].str.len()
@@ -119,7 +122,8 @@ print(df.loc[oldest_index,['title','release_year']])
 ##i) Newest content
 newest_index=df['release_year'].idxmax()
 print(df.loc[newest_index,['title','release_year']])
-
+```
+```
 ##5) Perform Vectorized String Operations
 ##a) Titles in uppercase
 print(df['title'].str.upper())
@@ -140,7 +144,8 @@ df['Primary Genre']=df['listed_in'].str.split(',').str[0]
 print(df['Primary Genre'].head())
 ## i) Display Primary Genre
 df[['title', 'listed_in', 'Primary Genre']].head()
-
+```
+```
 ## 6) Perform Aggregation and Grouping
 ## a) Number of Movies and TV Shows
 df.groupby('type')['title'].count()
@@ -148,7 +153,8 @@ df.groupby('type')['title'].count()
 df.groupby('type')['release_year'].mean()
 ## c) Number of titles in each rating category
 df.groupby('rating')['title'].count()
-
+```
+```
 ## 7) Perform Frequency Analysis
 ## a) Top 10 countries with highest number of Netflix titles
 countries=df['country'].dropna().str.split(',').explode().str.strip()
@@ -159,7 +165,8 @@ directors.value_counts().head(10)
 ## c) Top 10 most common genres
 genres=df['listed_in'].dropna().str.split(',').explode().str.strip()
 genres.value_counts().head(10)
-
+```
+```
 ## 8) Create Pivot Tables
 ##a) Distribution of Movies and TV Shows across countries
 country_data = df.assign(
@@ -186,7 +193,8 @@ pivot_year = df.pivot_table(
     fill_value=0
 )
 print(pivot_year)
-
+```
+```
 ## 9) Perform Hierarchical Indexing (MultiIndex)
 ## a) Create MultiIndex using country and type
 multi_df = df.set_index(['country', 'type'])
@@ -194,7 +202,8 @@ multi_df = df.set_index(['country', 'type'])
 multi_df.loc['India', 'Movie']
 ## c) Display TV Shows from United States
 multi_df.loc['United States', 'TV Show']
-
+```
+```
 ## 10) Combine DataFrames
 ## a) Split dataset into Movies and TV Shows
 movies = df[df['type'] == 'Movie']
@@ -213,7 +222,8 @@ merged_df = pd.merge(
     on='title'
 )
 print(merged_df.head())
-
+```
+```
 ## 11) Analyze Netflix Additions Over Time
 ## a) Convert date_added
 df['date_added'] = pd.to_datetime(df['date_added'], errors='coerce')
@@ -234,7 +244,8 @@ monthly_additions = df.groupby(
     ['Month Added', 'type']
 ).size().unstack(fill_value=0)
 print(monthly_additions)
-
+```
+```
 ## 12) Generate a Summary Report
 ## a) Which country has the highest Netflix content?
 countries = df['country'].dropna().str.split(',').explode().str.strip()
@@ -259,7 +270,8 @@ print("Most common genre:", most_common_genre)
 type_counts = df['type'].value_counts()
 type_percentage = (type_counts / len(df)) * 100
 print(type_percentage)
-
+```
+```
 ## Meaningful observations
 print("Country with highest content:", countries.value_counts().idxmax())
 print("Year with highest additions:", df['Year Added'].value_counts().idxmax())

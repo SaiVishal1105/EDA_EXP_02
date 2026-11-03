@@ -1,13 +1,13 @@
 ## Netflix Shows & Movies
 
-#### Name: Sai Vishal D
-#### Register Number: 212223230180
+### Name: Sai Vishal D
+### Register Number: 212223230180
 
-### Aim
+## Aim
 
 To analyze Netflix dataset and compare movies vs TV shows, top producing countries, and release year trends.
 
-### Procedure / Algorithm
+## Procedure / Algorithm
 
 Step 1: Load and Explore the Dataset
 
@@ -33,7 +33,7 @@ Step 11: Analyze Netflix Additions Over Time
 
 Step 12: Generate Summary Report
 
-### Program
+## Program
 ```
 import pandas as pd
 ##1) Load and Explore the Dataset
@@ -282,7 +282,7 @@ print("Content percentage:")
 print((df['type'].value_counts() / len(df)) * 100)
 ```
 
-### Ouptut
+## Ouptut
 <img width="557" height="727" alt="image" src="https://github.com/user-attachments/assets/53b02d04-a479-4fbc-a33f-7887fb50bdde" />
 <img width="495" height="367" alt="image" src="https://github.com/user-attachments/assets/8671c2f0-aaef-4d0c-b41f-4733376d2070" />
 <img width="1733" height="517" alt="image" src="https://github.com/user-attachments/assets/28585650-4940-436d-b1e9-9c83a8fd4591" />
@@ -296,6 +296,6 @@ print((df['type'].value_counts() / len(df)) * 100)
 <img width="1782" height="667" alt="image" src="https://github.com/user-attachments/assets/5eec040c-533c-4b1f-a921-dac1f7864570" />
 <img width="1783" height="160" alt="image" src="https://github.com/user-attachments/assets/ee040921-262b-4c5b-b638-7671ea7a8b94" />
 
-### Result
+## Result
 
 Helps Netflix in content planning & investments.

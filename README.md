@@ -296,17 +296,6 @@ print((df['type'].value_counts() / len(df)) * 100)
 <img width="1782" height="667" alt="image" src="https://github.com/user-attachments/assets/5eec040c-533c-4b1f-a921-dac1f7864570" />
 <img width="1783" height="160" alt="image" src="https://github.com/user-attachments/assets/ee040921-262b-4c5b-b638-7671ea7a8b94" />
 
-
-
-
-
-
-
-
-
-
-
-
-**Result**
+### Result
 
 Helps Netflix in content planning & investments.

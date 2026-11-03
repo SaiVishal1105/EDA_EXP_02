@@ -1,13 +1,13 @@
-**Netflix Shows & Movies**
+## Netflix Shows & Movies
 
-##### Name: Sai Vishal D
-##### Register Number: 212223230180
+#### Name: Sai Vishal D
+#### Register Number: 212223230180
 
-**Aim**
+### Aim**
 
 To analyze Netflix dataset and compare movies vs TV shows, top producing countries, and release year trends.
 
-**Procedure / Algorithm**
+### Procedure / Algorithm
 
 Step 1: Load and Explore the Dataset
 
@@ -32,7 +32,8 @@ Step 10: Combine DataFrames
 Step 11: Analyze Netflix Additions Over Time
 
 Step 12: Generate Summary Report
-**Program**
+
+### Program
 ```
 import pandas as pd
 ##1) Load and Explore the Dataset
@@ -281,7 +282,7 @@ print("Content percentage:")
 print((df['type'].value_counts() / len(df)) * 100)
 ```
 
-**Ouptut**
+### Ouptut
 <img width="557" height="727" alt="image" src="https://github.com/user-attachments/assets/53b02d04-a479-4fbc-a33f-7887fb50bdde" />
 <img width="495" height="367" alt="image" src="https://github.com/user-attachments/assets/8671c2f0-aaef-4d0c-b41f-4733376d2070" />
 <img width="1733" height="517" alt="image" src="https://github.com/user-attachments/assets/28585650-4940-436d-b1e9-9c83a8fd4591" />

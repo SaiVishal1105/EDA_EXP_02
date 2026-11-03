@@ -307,4 +307,5 @@ print((df['type'].value_counts() / len(df)) * 100)
 
 
 **Result**
+
 Helps Netflix in content planning & investments.
